@@ -1,4 +1,6 @@
-import Image from 'next/image'
+"use client"
+
+import { useRouter } from "next/navigation"
 
 const suggestions = [
   { id: 1, username: 'user1', relation: 'New to Instagram' },
@@ -7,6 +9,7 @@ const suggestions = [
 ]
 
 export default function RightSidebar() {
+  const router = useRouter()
   return (
     <div className='w-80 mx-10 lg:flex hidden'>
      <div className="w-full fixed">
@@ -17,9 +20,9 @@ export default function RightSidebar() {
          
           className="rounded-full mr-4 w-14 h-14"
         />
-        <div>
-          <p className="font-semibold">yourusername</p>
-          <p className="text-gray-500">Your Name</p>
+        <div >
+          <p className="font-semibold" onClick={() => router.push('/userprofile')}>yourusername</p>
+          <p className="text-gray-500">AzSA</p>
         </div>
       </div>
       <div>

@@ -6,21 +6,24 @@ import Stories from "@/components/shared/Store";
 import Header from "@/components/shared/Header";
 import Post from "@/components/shared/Post";
 import RightSidebar from "@/components/shared/rightuserbar";
+import MobileHeader from "@/components/shared/MobileHeader";
 
 const page = () => {
 
 
   return (
-    <main className="max-w-7xl container">
+    <main className="max-w-7xl ">
       <Header/>
+      <MobileHeader/>
       <div className="flex justify-end">
         <RightSidebar/>
       </div>
-      <Stories/>
+      <div className="sm:mt-12 lg:-mt-3 ">
+        <Stories/>
       <Post
-      />
-
-      <div className="flex"></div>
+      /> 
+      </div>
+     
     </main>
   );
 };
