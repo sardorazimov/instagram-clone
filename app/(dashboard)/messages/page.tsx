@@ -1,3 +1,4 @@
+import DesektopMessage from "./src/DesektopMessage"
 import MessagesView from "./src/MessagesMobile"
 
 
@@ -7,6 +8,7 @@ const page = () => {
         <div className="lg:hidden sm:flex">
           <MessagesView/>
         </div>
+        <DesektopMessage/>
       </div>
     )
   }
