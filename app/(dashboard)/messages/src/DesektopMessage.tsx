@@ -185,6 +185,7 @@ export default function MessengerInterface() {
         <ScrollArea className="h-[calc(100vh-120px)]">
           {messages.map((message) => (
             <div
+             onClick={() => router.push('/messages/actions/home')}
               key={message.id}
               className="flex items-center gap-3 p-3 hover:bg-white/10 rounded-lg cursor-pointer"
             >
